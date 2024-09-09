@@ -9,6 +9,7 @@ def scrap_data(url):
         with open ('created_file', 'w+') as file:
             for item in soup.find_all(class_=['title','description card-text','ratings','caption']):
                 file.write(str(item))
+            print("file created and filename is created_file")
 
     except Exception as ex:
         print(ex)
